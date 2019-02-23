@@ -1,0 +1,22 @@
+<center><h1>Add New Movie</h1></center>
+<div class="container">
+  
+<%= form_for @movies, html: { multipart: true } do |f| %>   
+    <%= f.label :Title %>   
+    <%= f.text_field :title %> 
+    <br><br>
+     <%= f.label :Category %>   
+    <%= f.text_field :category %>
+    <br><br>
+    <%= f.label :Year %>   
+    <%= f.text_field :year %>
+    <br><br>
+    <%= f.label :Price %>   
+    <%= f.text_field :price %>  
+    <br><br>   
+    <%= f.label :Attachment %>   
+    <%= f.file_field :attachment %>   
+    <br>   
+    <%= f.submit "Add New Movie",class: "btn btn-primary" %>   
+ <% end %>   
+</div>

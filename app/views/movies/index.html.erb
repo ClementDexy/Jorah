@@ -1,0 +1,31 @@
+<style>
+    img{
+        height: 400px;
+        width: 300px;
+    }
+</style>
+
+
+   
+
+<div class="album py-5 bg-light">
+        <div class="container">
+        <div class="row">
+ <% @movies.each do |m| %> 
+          
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img src="<%= m.attachment %>" class="card-img-top"  alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text" mt-5><b>Title:</b><%= m.title %><br>
+                  <b>category:</b><%= m.category %><br>
+                  <b>Year:</b><%= m.year %><br>
+                  <b>price:</b><%= m.price %></p>
+                  <button type="button" href="buyform.html.erb" class="btn btn-success">Buy</button>
+                  </div>
+                </div>
+              </div>
+              <% end %> 
+            </div>
+            <br>
+            <br>
